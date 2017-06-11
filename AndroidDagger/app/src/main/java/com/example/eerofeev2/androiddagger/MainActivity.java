@@ -15,6 +15,8 @@ import com.example.eerofeev2.androiddagger.dependence.core.ComponentA;
 import com.example.eerofeev2.androiddagger.dependence.feature.ComponentB;
 import com.example.eerofeev2.androiddagger.dependence.feature.DaggerComponentB;
 
+import javax.inject.Inject;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -36,12 +38,16 @@ public class MainActivity extends AppCompatActivity {
 
     public static class TestObject{
 
+        @Inject
         ClassA1 classA1;
+        @Inject
         ClassA2 classA2;
+        @Inject
         ClassA3 classA3;
 
-
+        @Inject
         ClassB1 classB1;
+        @Inject
         ClassB2 classB2;
 
         public TestObject(ComponentB componentB) {
